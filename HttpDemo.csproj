@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{6B14855E-929B-45F4-A311-E8CB4535A378}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HttpDemo</RootNamespace>
+    <AssemblyName>GaiaDownload</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <ApplicationIcon>..\..\..\..\360极速浏览器下载\www.ico.la_8c988137be5494982ac4b2838ac811e6_128X128.ico</ApplicationIcon>
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <SignAssembly>False</SignAssembly>
+    <DelaySign>False</DelaySign>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <BaseAddress>4194304</BaseAddress>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+    <StartAction>Project</StartAction>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs" />
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ATestDanmuku.cs" />
+    <Compile Include="ATestDanmuku.Designer.cs">
+      <DependentUpon>ATestDanmuku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ButtonEx.cs" />
+    <Compile Include="DownloadBase.cs" />
+    <Compile Include="DownloadLive.cs" />
+    <Compile Include="DownloadLive.Designer.cs">
+      <DependentUpon>DownloadLive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DownloadLiveVideoUrl.cs" />
+    <Compile Include="DownloadPreviousVideoUrl.cs" />
+    <Compile Include="DownloadRecordFrm.cs" />
+    <Compile Include="DownloadRecordFrm.Designer.cs">
+      <DependentUpon>DownloadRecordFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fans.cs" />
+    <Compile Include="FansBoard.xaml.cs">
+      <DependentUpon>FansBoard.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FansStyle.xaml.cs">
+      <DependentUpon>FansStyle.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GaiaRoom.cs" />
+    <Compile Include="HttpHelper.cs" />
+    <Compile Include="MainForm.cs">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="MyFollow.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DownloadRecordVideoUrl.cs" />
+    <Compile Include="ReviewMessage.cs" />
+    <Compile Include="ReviewMessage.Designer.cs">
+      <DependentUpon>ReviewMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Room.xaml.cs">
+      <DependentUpon>Room.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SetPositionFrm.cs" />
+    <Compile Include="SetPositionFrm.Designer.cs">
+      <DependentUpon>SetPositionFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting.cs" />
+    <Compile Include="Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleMerger.cs" />
+    <Compile Include="SimpleMerger.Designer.cs">
+      <DependentUpon>SimpleMerger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SwitchFrm.cs" />
+    <Compile Include="SwitchFrm.Designer.cs">
+      <DependentUpon>SwitchFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UMessageBox.xaml.cs">
+      <DependentUpon>UMessageBox.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserLogin\CRC32.cs" />
+    <Compile Include="UserLogin\RoomData.cs" />
+    <Compile Include="UserLogin\RoomDetail.cs" />
+    <Compile Include="UserLogin\UserInfoManager.cs" />
+    <Compile Include="UserLogin\WorkLogin.cs" />
+    <Compile Include="Video\Mdbase64.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ATestDanmuku.resx">
+      <DependentUpon>ATestDanmuku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadRecordFrm.resx">
+      <DependentUpon>DownloadRecordFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReviewMessage.resx">
+      <DependentUpon>ReviewMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetPositionFrm.resx">
+      <DependentUpon>SetPositionFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimpleMerger.resx">
+      <DependentUpon>SimpleMerger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SwitchFrm.resx">
+      <DependentUpon>SwitchFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <Resource Include="Pic\dage.ico" />
+    <Resource Include="Pic\luoli1.jpg" />
+    <Resource Include="Pic\luoli2.jpg" />
+    <Resource Include="Pic\defaultavatar.png" />
+    <Resource Include="defaultavatar.png" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadLive.resx">
+      <DependentUpon>DownloadLive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pic" />
+    <Folder Include="Video" />
+    <Folder Include="UserLogin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="FansBoard.xaml" />
+    <Page Include="FansStyle.xaml" />
+    <Page Include="Room.xaml" />
+    <Page Include="UMessageBox.xaml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

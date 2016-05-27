@@ -1,0 +1,83 @@
+D:\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\HttpDemo.csprojResolveAssemblyReference.cache
+D:\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\Room.baml
+D:\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\Room.g.cs
+D:\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\HttpDemo_MarkupCompile.cache
+D:\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\HttpDemo.g.resources
+D:\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\HttpDemo.MainForm.resources
+D:\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\HttpDemo.csproj.GenerateResource.Cache
+D:\imooc\windows\Http\HttpDemo\HttpDemo\bin\Debug\HttpDemo.exe.config
+D:\imooc\windows\Http\HttpDemo\HttpDemo\bin\Debug\HttpDemo.exe
+D:\imooc\windows\Http\HttpDemo\HttpDemo\bin\Debug\HttpDemo.pdb
+D:\imooc\windows\Http\HttpDemo\HttpDemo\bin\Debug\Newtonsoft.Json.dll
+D:\imooc\windows\Http\HttpDemo\HttpDemo\bin\Debug\Newtonsoft.Json.xml
+D:\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\HttpDemo.exe
+D:\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\HttpDemo.pdb
+D:\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\HttpDemo.DownloadLive.resources
+D:\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\FansStyle.baml
+D:\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\UMessageBox.baml
+D:\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\FansBoard.g.cs
+D:\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\FansStyle.g.cs
+D:\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\UMessageBox.g.cs
+D:\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\HttpDemo_MarkupCompile.lref
+D:\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\FansBoard.baml
+D:\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\HttpDemo.Setting.resources
+D:\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\HttpDemo.About.resources
+D:\163study\IMOOK Learn\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\HttpDemo.csprojResolveAssemblyReference.cache
+D:\163study\IMOOK Learn\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\FansStyle.baml
+D:\163study\IMOOK Learn\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\Room.baml
+D:\163study\IMOOK Learn\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\UMessageBox.baml
+D:\163study\IMOOK Learn\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\FansBoard.g.cs
+D:\163study\IMOOK Learn\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\FansStyle.g.cs
+D:\163study\IMOOK Learn\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\Room.g.cs
+D:\163study\IMOOK Learn\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\UMessageBox.g.cs
+D:\163study\IMOOK Learn\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\163study\IMOOK Learn\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\GaiaDownload_MarkupCompile.cache
+D:\163study\IMOOK Learn\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\GaiaDownload_MarkupCompile.lref
+D:\163study\IMOOK Learn\imooc\windows\Http\HttpDemo\HttpDemo\bin\Debug\GaiaDownload.exe.config
+D:\163study\IMOOK Learn\imooc\windows\Http\HttpDemo\HttpDemo\bin\Debug\GaiaDownload.exe
+D:\163study\IMOOK Learn\imooc\windows\Http\HttpDemo\HttpDemo\bin\Debug\GaiaDownload.pdb
+D:\163study\IMOOK Learn\imooc\windows\Http\HttpDemo\HttpDemo\bin\Debug\Newtonsoft.Json.dll
+D:\163study\IMOOK Learn\imooc\windows\Http\HttpDemo\HttpDemo\bin\Debug\Newtonsoft.Json.xml
+D:\163study\IMOOK Learn\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\FansBoard.baml
+D:\163study\IMOOK Learn\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\GaiaDownload.g.resources
+D:\163study\IMOOK Learn\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\HttpDemo.ReviewMessage.resources
+D:\163study\IMOOK Learn\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\HttpDemo.Setting.resources
+D:\163study\IMOOK Learn\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\HttpDemo.SimpleMerger.resources
+D:\163study\IMOOK Learn\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\HttpDemo.About.resources
+D:\163study\IMOOK Learn\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\HttpDemo.DownloadLive.resources
+D:\163study\IMOOK Learn\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\HttpDemo.MainForm.resources
+D:\163study\IMOOK Learn\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\HttpDemo.csproj.GenerateResource.Cache
+D:\163study\IMOOK Learn\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\GaiaDownload.exe
+D:\163study\IMOOK Learn\imooc\windows\Http\HttpDemo\HttpDemo\obj\Debug\GaiaDownload.pdb
+D:\imooc\windows\HttpDemo\HttpDemo\obj\Debug\HttpDemo.csprojResolveAssemblyReference.cache
+D:\imooc\windows\HttpDemo\HttpDemo\obj\Debug\FansStyle.baml
+D:\imooc\windows\HttpDemo\HttpDemo\obj\Debug\Room.baml
+D:\imooc\windows\HttpDemo\HttpDemo\obj\Debug\UMessageBox.baml
+D:\imooc\windows\HttpDemo\HttpDemo\obj\Debug\FansBoard.g.cs
+D:\imooc\windows\HttpDemo\HttpDemo\obj\Debug\FansStyle.g.cs
+D:\imooc\windows\HttpDemo\HttpDemo\obj\Debug\Room.g.cs
+D:\imooc\windows\HttpDemo\HttpDemo\obj\Debug\UMessageBox.g.cs
+D:\imooc\windows\HttpDemo\HttpDemo\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\imooc\windows\HttpDemo\HttpDemo\obj\Debug\GaiaDownload_MarkupCompile.cache
+D:\imooc\windows\HttpDemo\HttpDemo\obj\Debug\GaiaDownload_MarkupCompile.lref
+D:\imooc\windows\HttpDemo\HttpDemo\bin\Debug\GaiaDownload.exe.config
+D:\imooc\windows\HttpDemo\HttpDemo\bin\Debug\GaiaDownload.exe
+D:\imooc\windows\HttpDemo\HttpDemo\bin\Debug\GaiaDownload.pdb
+D:\imooc\windows\HttpDemo\HttpDemo\bin\Debug\Newtonsoft.Json.dll
+D:\imooc\windows\HttpDemo\HttpDemo\bin\Debug\Newtonsoft.Json.xml
+D:\imooc\windows\HttpDemo\HttpDemo\obj\Debug\FansBoard.baml
+D:\imooc\windows\HttpDemo\HttpDemo\obj\Debug\GaiaDownload.g.resources
+D:\imooc\windows\HttpDemo\HttpDemo\obj\Debug\HttpDemo.DownloadRecordFrm.resources
+D:\imooc\windows\HttpDemo\HttpDemo\obj\Debug\HttpDemo.ReviewMessage.resources
+D:\imooc\windows\HttpDemo\HttpDemo\obj\Debug\HttpDemo.Setting.resources
+D:\imooc\windows\HttpDemo\HttpDemo\obj\Debug\HttpDemo.SimpleMerger.resources
+D:\imooc\windows\HttpDemo\HttpDemo\obj\Debug\HttpDemo.SwitchFrm.resources
+D:\imooc\windows\HttpDemo\HttpDemo\obj\Debug\HttpDemo.About.resources
+D:\imooc\windows\HttpDemo\HttpDemo\obj\Debug\HttpDemo.DownloadLive.resources
+D:\imooc\windows\HttpDemo\HttpDemo\obj\Debug\HttpDemo.MainForm.resources
+D:\imooc\windows\HttpDemo\HttpDemo\obj\Debug\HttpDemo.csproj.GenerateResource.Cache
+D:\imooc\windows\HttpDemo\HttpDemo\obj\Debug\GaiaDownload.exe
+D:\imooc\windows\HttpDemo\HttpDemo\obj\Debug\GaiaDownload.pdb
+D:\imooc\windows\HttpDemo\HttpDemo\obj\Debug\HttpDemo.SetPositionFrm.resources
+D:\imooc\windows\HttpDemo\HttpDemo\obj\Debug\HttpDemo.ATestDanmuku.resources

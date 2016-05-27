@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window xmlns:local="clr-namespace:HttpDemo"
+	x:Class="HttpDemo.FansBoard" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Width="1024"
+	Height="650"
+	MouseDown="avatar_MouseDown"
+	Icon="Pic\dage.ico"
+	Title="0.0">
+	<Window.Resources>
+		<local:AvatarConVerter
+			x:Key="avc" />
+	</Window.Resources>
+	<DockPanel
+		Name="dock"
+		Margin="0"
+		VerticalAlignment="Top">
+		<StackPanel
+			DockPanel.Dock="Left">
+			<ListBox
+				Background="Transparent"
+				Margin="0,5,0,5"
+				BorderBrush="Transparent"
+				ScrollViewer.CanContentScroll="False"
+				Name="listBox">
+				<ListBox.ItemsPanel>
+					<ItemsPanelTemplate>
+						<WrapPanel
+							Orientation="Vertical" />
+					</ItemsPanelTemplate>
+				</ListBox.ItemsPanel>
+				<ListBox.ItemContainerStyle>
+					<Style
+						TargetType="{x:Type ListBoxItem}">
+						<Setter
+							Property="Template">
+							<Setter.Value>
+								<ControlTemplate
+									TargetType="{x:Type ListBoxItem}">
+									<Grid>
+										<StackPanel
+											Orientation="Horizontal"
+											Width="150"
+											Margin="10"
+											Height="50">
+											<Ellipse
+												Width="50"
+												Height="50"
+												Name="avatar"
+												Stroke="BurlyWood"
+												StrokeThickness="3"
+												Fill="{Binding  avatar,Converter={StaticResource avc }}"></Ellipse>
+											<StackPanel
+												Width="100"
+												Orientation="Vertical"
+												Margin="10,0">
+												<TextBlock
+													Name="name"
+													Height="20"
+													FontSize="14"
+													FontWeight="Bold"
+													Text="{Binding nickname}"
+													HorizontalAlignment="Center"
+													VerticalAlignment="Center"></TextBlock>
+												<StackPanel
+													Height="30">
+													<StackPanel
+														Orientation="Horizontal"
+														Height="15">
+														<TextBlock
+															Text="等级Level："
+															Width="60"
+															FontFamily="华文新魏"
+															TextAlignment="Center"
+															VerticalAlignment="Center"
+															HorizontalAlignment="Center"></TextBlock>
+														<TextBlock
+															Name="level"
+															FontWeight="Bold"
+															Text="{Binding level}"
+															TextAlignment="Center"
+															FontFamily="Consolas"></TextBlock>
+													</StackPanel>
+													<TextBlock
+														Name="score"
+														Text="{Binding score}"
+														Margin="20,0"
+														HorizontalAlignment="Left"
+														VerticalAlignment="Center"></TextBlock>
+												</StackPanel>
+											</StackPanel>
+										</StackPanel>
+									</Grid>
+								</ControlTemplate>
+							</Setter.Value>
+						</Setter>
+					</Style>
+				</ListBox.ItemContainerStyle>
+			</ListBox>
+		</StackPanel>
+		<StackPanel
+			DockPanel.Dock="Left"
+			Width="853"
+			Name="background"
+			Height="640"
+			Margin="20,-40,20,0"
+			MouseDown="background_MouseDown" />
+		<StackPanel
+			DockPanel.Dock="Right">
+			<ListBox
+				Background="Transparent"
+				Margin="0,5,0,5"
+				BorderBrush="Transparent"
+				ScrollViewer.CanContentScroll="False"
+				Name="listBox2">
+				<ListBox.ItemsPanel>
+					<ItemsPanelTemplate>
+						<WrapPanel
+							Orientation="Vertical" />
+					</ItemsPanelTemplate>
+				</ListBox.ItemsPanel>
+				<ListBox.ItemContainerStyle>
+					<Style
+						TargetType="{x:Type ListBoxItem}">
+						<Setter
+							Property="Template">
+							<Setter.Value>
+								<ControlTemplate
+									TargetType="{x:Type ListBoxItem}">
+									<Grid>
+										<StackPanel
+											Orientation="Horizontal"
+											Width="150"
+											Margin="10"
+											Height="50">
+											<Ellipse
+												Width="50"
+												Height="50"
+												Stroke="BurlyWood"
+												StrokeThickness="3"
+												Fill="{Binding  avatar,Converter={StaticResource avc }}"></Ellipse>
+											<StackPanel
+												Width="100"
+												Orientation="Vertical"
+												Margin="10,0">
+												<TextBlock
+													Name="name"
+													Height="20"
+													FontSize="14"
+													FontWeight="Bold"
+													Text="{Binding nickname}"
+													HorizontalAlignment="Center"
+													VerticalAlignment="Center"></TextBlock>
+												<StackPanel
+													Height="30">
+													<StackPanel
+														Orientation="Horizontal"
+														Height="15">
+														<TextBlock
+															Text="等级Level："
+															Width="60"
+															FontFamily="华文新魏"
+															TextAlignment="Center"
+															VerticalAlignment="Center"
+															HorizontalAlignment="Center"></TextBlock>
+														<TextBlock
+															Name="level"
+															FontWeight="Bold"
+															Text="{Binding level}"
+															TextAlignment="Center"
+															FontFamily="Consolas"></TextBlock>
+													</StackPanel>
+													<TextBlock
+														Name="score"
+														Text="{Binding score}"
+														Margin="20,0"
+														HorizontalAlignment="Left"
+														VerticalAlignment="Center"></TextBlock>
+												</StackPanel>
+											</StackPanel>
+										</StackPanel>
+									</Grid>
+								</ControlTemplate>
+							</Setter.Value>
+						</Setter>
+					</Style>
+				</ListBox.ItemContainerStyle>
+			</ListBox>
+		</StackPanel>
+	</DockPanel>
+</Window>
