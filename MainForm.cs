@@ -32,9 +32,25 @@ namespace HttpDemo
 			//
 			InitializeComponent();
 
+			if (checkUpdateThread==null||!checkUpdateThread.IsAlive) {
+				checkUpdateThread=new Thread(new ThreadStart(()=>{
+				                                             	try{
+				                                             		int NewVersion= int.Parse(worklog.GetUpdate());
+				                                             		if (NewVersion>DVersion) {
+				                                             			MessageBox.Show("有新版本，请去贴吧下载，扬co发的女王那个贴子");
+				                                             			SetInfoText("有新版本，请去贴吧下载，扬co发的女王那个贴子");
+				                                             		}
+				                                             		else
+				                                             			SetInfoText("没有更新");
+				                                             	}
+				                                             	catch{SetInfoText("检查更新失败");}
+				                                             }));
+			}
+			checkUpdateThread.Start();
 		}
+		Thread checkUpdateThread;
 		WorkLogin worklog = new WorkLogin();
-		
+		int DVersion=12;
 		
 		
 		public void Run()

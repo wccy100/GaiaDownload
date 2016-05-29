@@ -9,6 +9,7 @@
 using System;
 using System.Collections.Generic;
 using System.Net;
+using System.Text.RegularExpressions;
 using System.Threading;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -38,7 +39,7 @@ namespace HttpDemo
 		string gaia_enter="http://www.zhanqi.tv/api/user/record.watch?type=1&id=52320";
 		string sign_all="http://www.zhanqi.tv/api/actives/signin/fans.sign?";
 		string follow_list="http://www.zhanqi.tv/api/user/follow.listall";
-		
+		string update="https://github.com/younghang/GaiaDownload/blob/master/gaiaupdate.txt";
 		string get_room_view="http://www.zhanqi.tv/api/public/room.viewer?sid=t3rtnp7fl8fdhdneunks4975k0.C2D54228-3F07-F843-BAAD-B56C91E92C0F&ver=2.6.8&os=3";
 		string log_out="http://www.zhanqi.tv/api/auth/user.logout?";
 		string log_out2="http://www.zhanqi.tv/api/actives/task/info.promote";
@@ -134,6 +135,20 @@ namespace HttpDemo
 		{
 			return GetUrlJson(user_coin);
 			
+		}
+				/// <summary>
+		/// 检测更新 gaiaDownloadVersion=12#
+		/// </summary>	 
+		public string GetUpdate()
+		{
+			HttpWebResponse response = HttpHelper.CreateGetHttpResponse(update, timeout, null, null);	
+		 
+			string recievedata = HttpHelper.GetResponseString(response);
+			string versionReg="gaiaDownloadVersion=[0-9]+#";
+			string version=Regex.Match(recievedata, versionReg).Groups[0].Value;
+			version=version.Split('=')[1];
+			version=version.Substring(0,version.Length-1);
+			return version;	 
 		}
 		
 		//获取房间详细
