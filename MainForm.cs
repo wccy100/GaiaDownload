@@ -37,7 +37,8 @@ namespace HttpDemo
 				                                             	try{
 				                                             		int NewVersion= int.Parse(worklog.GetUpdate());
 				                                             		if (NewVersion>DVersion) {
-				                                             			MessageBox.Show("有新版本，请去贴吧下载，扬co发的女王那个贴子");
+				                                             				MessageBox.Show("有新版本，请去贴吧下载，扬co发的女王那个贴子或者这里http://yun.baidu.com/share/link?shareid=3067013852&uk=3514645625");
+				                                               	
 				                                             			SetInfoText("有新版本，请去贴吧下载，扬co发的女王那个贴子");
 				                                             		}
 				                                             		else
