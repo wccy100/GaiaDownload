@@ -58,6 +58,10 @@ namespace HttpDemo
 			if (Safe!=1) {
 				return;
 			}
+			if (!merger) {
+				FinishATShow("下载完成，不合并");
+				return;
+			}
 			FinishATShow("下载完成，开始合并");
 			
 			var files = Directory.GetFiles(filedir);
