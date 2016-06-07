@@ -10,7 +10,7 @@
     <AssemblyName>GaiaDownload</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <ApplicationIcon>..\..\..\..\360极速浏览器下载\www.ico.la_8c988137be5494982ac4b2838ac811e6_128X128.ico</ApplicationIcon>
+    <ApplicationIcon>..\gaia.ico</ApplicationIcon>
     <NoWin32Manifest>False</NoWin32Manifest>
     <SignAssembly>False</SignAssembly>
     <DelaySign>False</DelaySign>
