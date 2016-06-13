@@ -66,25 +66,30 @@ namespace HttpDemo
 			
 			var files = Directory.GetFiles(filedir);
 			if (files.Length == 0) {
-				FinishATShow("没有视频,可以关闭");
-				
+				FinishATShow("没有视频,可以关闭");				
 				return;
 			}
 			var tsfiles = from file in files
 				let tsfile = new FileInfo(file)
 				where SelectTs(tsfile)
-				orderby tsfile.Name
+				orderby int.Parse(tsfile.Name.Split('.')[0])
 				select tsfile;
 			
 			var filelist = tsfiles.ToList();
 			
 			FileStream sumfile;
 			try{
-				sumfile = File.Create(filedir + "/" + "Gaia视频文件" + ".ts");
+				string SumFilePath=filedir + "/" + "Gaia视频文件" + ".ts";
+				if (File.Exists(SumFilePath) ){
+				    		FinishATShow("合并文件已经存在，没有执行，请手动处理");
+					return;
+				}
+				sumfile = File.Create(SumFilePath);
 			}
 			catch{
 				FinishATShow("文件处理异常");
-				sumfile = File.Open(filedir + "/" + "Gaia视频文件" + ".ts",FileMode.Create);
+				return;
+		 
 			}
 			sumfile.Close();
 			
@@ -124,6 +129,8 @@ namespace HttpDemo
 				File.Delete(filelist[i].FullName);
 				sumfile.Flush();
 				sumfile.Close();
+				
+				Thread.Sleep(1000);
 			}
 			sumfile.Close();
 			FinishATShow("合并完成。可以关闭");

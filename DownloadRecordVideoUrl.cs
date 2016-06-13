@@ -28,8 +28,8 @@ namespace HttpDemo
 			local = "http://dlvod.cdn.zhanqi.tv";
 		}
 		public double duration;
-		  double duration2;
-		  double duration3;
+		double duration2;
+		double duration3;
 		public override   void  AnalysisUrl(string str)
 		{
 			
@@ -47,7 +47,7 @@ namespace HttpDemo
 					if (this.i ==7) {
 						duration3 = double.Parse(strlist[i].Substring(ins, end - ins - 1));
 					}
-				 
+					
 					
 				}
 				if (strlist[i].Contains("SEQUENCE")) {
@@ -55,14 +55,14 @@ namespace HttpDemo
 					timelength = li[1];
 				}
 				if (strlist[i].Contains(".ts")) {
-					 
+					
 					string key = strlist[i];
 					AddUrl(local + key);
 					
 				}
 			}
 			duration=(duration+duration2+duration3)/3;
-		 
+			
 		}
 		protected override void CallStartDownload()
 		{
@@ -89,7 +89,7 @@ namespace HttpDemo
 	}
 	public class DownloadRecordVideo :Downloader
 	{
-		 
+		
 
 		VideoInfo videoInfo = new VideoInfo();
 		
@@ -111,9 +111,9 @@ namespace HttpDemo
 			
 			string video_url;
 			string videoReg = "VideoID\":.+\\.m3u8";
-			video_url = Regex.Match(content, videoReg).Groups[0].Value;			
+			video_url = Regex.Match(content, videoReg).Groups[0].Value;
 			video_url = String.Join("", video_url.Split('\\'));
-		 
+			
 			video_url = Regex.Replace(video_url, "\"", "");
 			video_url = "http://dlvod.cdn.zhanqi.tv" + video_url.Split(':')[1];
 			
@@ -133,30 +133,27 @@ namespace HttpDemo
 			if (Directory.Exists(Downloader.filedir) && Directory.GetFiles(Downloader.filedir).Length == 0) {
 				Directory.Delete(Downloader.filedir);
 			}
-		 
+			
 			
 			if (!Downloader.downloading) {
-				FinishAtsd("合并文件");
+				FinishAtsd("开始合并文件");
 				this.FileTsDeal();
-				FinishAtsd("下载完成");
+				 
 			}
 		}
 
-		
-		
 
-		
 
 		public double GetDuration()
 		{
 			return  ((DownloadRecordVideoUrl)dlr).duration ;
 		}
 		public string record_url;
-		 
+		
 		void GetPic()
 		{
 			WebClient webClient = new WebClient();
- 
+			
 			string text = Downloader.filedir + "/" + videoInfo.titleName + ".jpg";
 			webClient.DownloadFileAsync(new Uri(videoInfo.imagUrl), text);
 		}
@@ -170,7 +167,7 @@ namespace HttpDemo
 			try {
 				response = httpWebRequest.GetResponse();
 			} catch (Exception) {
-				 
+				
 				
 				Console.WriteLine("biubiu连接出错");
 				return;
@@ -182,7 +179,7 @@ namespace HttpDemo
 				content = text;
 				Console.WriteLine("开始下载");
 				
-				 
+				
 			}
 			
 		}
@@ -209,7 +206,7 @@ namespace HttpDemo
 			DownLoadVedio();
 //			((DownloadRecordVideoUrl)dlr).SetPos(start,end);
 			
-		
+			
 			
 		}
 
@@ -251,7 +248,7 @@ namespace HttpDemo
 				StreamReader streamReader = new StreamReader(responseStream, Encoding.UTF8);
 				text = streamReader.ReadToEnd();
 				
-			FinishAtsd("添加视频地址中");
+				FinishAtsd("添加视频地址中");
 				
 				
 			}
@@ -275,7 +272,7 @@ namespace HttpDemo
 				return;
 			}
 			if (dlr.downloadpos < ((DownloadRecordVideoUrl)dlr).End) {
-			 
+				
 			} else {
 				Stop();
 				return;
@@ -289,12 +286,19 @@ namespace HttpDemo
 			int num4 = oneLink.IndexOf('$');
 			this.fileName = oneLink.Substring(0, num4);
 			string uriString = oneLink.Substring(num4 + 1, oneLink.Length - num4 - 1);
+			string FileName = Downloader.filedir + "/" + this.fileName + ".ts";
+			if (File.Exists(FileName)) {
+				FinishAtsd("文件" + fileName + "已经存在跳过");
+				Downloader.first = false;
+				CallDownload();
+				return;
+			}
 			WebClient webClient = new WebClient();
 			webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(this.Completed);
 			webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(this.ProgressChanged);
-			string text = Downloader.filedir + "/" + this.fileName + ".ts";
-			webClient.DownloadFileAsync(new Uri(uriString), text);
-			Downloader.first = false;
+			
+			webClient.DownloadFileAsync(new Uri(uriString), FileName);
+			
 		}
 
 		protected void ProgressChanged(object sender, DownloadProgressChangedEventArgs e)
@@ -312,7 +316,12 @@ namespace HttpDemo
 		protected void Completed(object sender, AsyncCompletedEventArgs e)
 		{
 			FinishAtsd("文件" + fileName + "已经下载好了");
-			Downloader.downloading = false;
+			Downloader.downloading = false;		
+			CallDownload();
+			
+		}
+		protected void CallDownload()
+		{
 			if (dlr.Hasurl()) {
 				this.DownLoadVedio();
 			}
@@ -320,9 +329,6 @@ namespace HttpDemo
 			{
 				FileTsDeal();
 			}
-			
-			
-			
 		}
 	}
 	

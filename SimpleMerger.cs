@@ -61,7 +61,7 @@ namespace HttpDemo
 
 		bool SelectTs(FileInfo di)
 		{
-	 
+			
 			if (di.Extension == ".ts") {
 				return true;
 			}
@@ -70,7 +70,7 @@ namespace HttpDemo
 
 		void FileTsDeal()
 		{
-		
+			
 			if (!Directory.Exists(filePath)) {
 				btn_Start.Enabled = true;
 				txt_state.Text = "路径不存在";
@@ -92,24 +92,28 @@ namespace HttpDemo
 
 			if (checkBox.Checked) {
 				tsfiles = from file in files
-				           let tsfile = new FileInfo(file)
-				           where SelectTs(tsfile)
-				           orderby tsfile.Name
-				           select tsfile;
+					let tsfile = new FileInfo(file)
+					where SelectTs(tsfile)
+					orderby int.Parse(tsfile.Name.Split('.')[0])
+					select tsfile;
 			} else {
 				tsfiles = from file in files
-				           let tsfile = new FileInfo(file)
-				           where SelectTs(tsfile)
-				           orderby tsfile.LastWriteTime
-				           select tsfile;
+					let tsfile = new FileInfo(file)
+					where SelectTs(tsfile)
+					orderby int.Parse(tsfile.Name.Split('.')[0])
+					select tsfile;
 			}
 			
 			
 			var filelist = tsfiles.ToList();
-		
-			FileStream sumfile;
 			
-			sumfile = File.Create(filePath + "/" + "Gaia视频文件合并" + ".ts");
+			FileStream sumfile;
+			string SumFilePath=filePath + "/" + "Gaia视频文件合并" + ".ts";
+			if (File.Exists(SumFilePath)) {
+				txt_state.Text = "合并文件已经存在，没有执行，请手动处理";
+				return;
+			}
+			sumfile = File.Create(SumFilePath);
 			sumfile.Close();
 			
 			

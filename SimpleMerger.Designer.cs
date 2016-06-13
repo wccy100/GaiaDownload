@@ -52,11 +52,12 @@ namespace HttpDemo
 			// label1
 			// 
 			this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.label1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
 			this.label1.Location = new System.Drawing.Point(30, 9);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(549, 64);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "简单合并程序，直接叠加.ts文件，按windows文件管理器的名称排序,没有进行任何处理，停止下载后会自动调用，也有几率不调用，建议用专业合并软件";
+			this.label1.Text = "简单合并程序，直接叠加.ts文件，按.ts前面的序号大小排序,没有进行任何处理，停止下载后会自动调用，也有几率不调用，建议用专业合并软件";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// btn_fileLocation
@@ -95,14 +96,13 @@ namespace HttpDemo
 			// 
 			// checkBox
 			// 
-			this.checkBox.Checked = true;
-			this.checkBox.CheckState = System.Windows.Forms.CheckState.Checked;
 			this.checkBox.Location = new System.Drawing.Point(477, 78);
 			this.checkBox.Name = "checkBox";
 			this.checkBox.Size = new System.Drawing.Size(102, 21);
 			this.checkBox.TabIndex = 4;
 			this.checkBox.Text = "按文件名排序.";
 			this.checkBox.UseVisualStyleBackColor = true;
+			this.checkBox.Visible = false;
 			// 
 			// SimpleMerger
 			// 
@@ -118,7 +118,6 @@ namespace HttpDemo
 			this.Name = "SimpleMerger";
 			this.Text = "SimpleMerger";
 			this.ResumeLayout(false);
-
 		}
 	}
 }
