@@ -24,7 +24,7 @@ namespace HttpDemo
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new SwitchFrm());
+			Application.Run(new MainForm());
 		}
 		
 	}

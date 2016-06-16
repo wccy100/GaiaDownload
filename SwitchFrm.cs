@@ -27,12 +27,30 @@ namespace HttpDemo
 			// The InitializeComponent() call is required for Windows Forms designer support.
 			//
 			InitializeComponent();
-			
+				if (checkUpdateThread==null||!checkUpdateThread.IsAlive) {
+				checkUpdateThread=new Thread(new ThreadStart(()=>{
+				                                             	try{
+				                                             		int NewVersion= int.Parse(worklog.GetUpdate());
+				                                             		if (NewVersion>DVersion) {
+				                                             				MessageBox.Show("有新版本，请去贴吧下载，扬co发的女王那个贴子或者这里http://yun.baidu.com/share/link?shareid=3067013852&uk=3514645625");
+				                                               	
+				                                             			SetInfoText(lbl_info,"有新版本，请去贴吧下载，扬co发的女王那个贴子");
+				                                             		}
+				                                             		else
+				                                             			SetInfoText(lbl_info,"没有更新");
+				                                             	}
+				                                             	catch{SetInfoText(lbl_info,"检查更新失败");}
+				                                             }));
+			}
+			checkUpdateThread.Start();
+		 
+		
 			//
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
-		
+		int DVersion=12;
+		Thread checkUpdateThread;
 		TextBox edit_url;
 		Label state;
 		Downloader downloader;

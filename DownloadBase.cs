@@ -88,8 +88,7 @@ namespace HttpDemo
 			}
 			catch{
 				FinishATShow("文件处理异常");
-				return;
-		 
+				return;		 
 			}
 			sumfile.Close();
 			
@@ -129,8 +128,7 @@ namespace HttpDemo
 				File.Delete(filelist[i].FullName);
 				sumfile.Flush();
 				sumfile.Close();
-				
-				Thread.Sleep(1000);
+			 
 			}
 			sumfile.Close();
 			FinishATShow("合并完成。可以关闭");
